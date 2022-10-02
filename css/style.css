@@ -22,6 +22,7 @@ html
     position: relative;
     background: var(--bgColor);
     color: var(--primaryColor);
+    animation: fade-in 500ms ease-in-out; /* for FOIT and FOUT */
 }
 .container
 {
