@@ -115,7 +115,18 @@ button
     width: 100%;
     transform: scale(1.5);
     transform-origin: bottom;
-    /* translate: -5rem; */
+    animation: fade-in 1.5s ease-in;
+}
+@keyframes fade-in
+{
+    from
+    {
+        opacity: 0%;
+    }
+    to
+    {
+        opacity: 100%;
+    }
 }
 main
 {
