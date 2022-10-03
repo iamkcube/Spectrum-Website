@@ -146,6 +146,7 @@ main
     font-family: var(--serifFont);
     font-size: 5.5rem;
     letter-spacing: -0.1rem;
+    padding-right: 20%;
 }
 #green
 {
