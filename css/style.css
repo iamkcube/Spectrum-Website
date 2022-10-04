@@ -562,6 +562,7 @@ main
     height: 4rem;
     padding-left: 2rem;
     border-radius: 1.125rem ;
+    font-family:inherit;
     font-size: 1rem;
     color: var(--paraColor);
     letter-spacing: 0.0625rem;
