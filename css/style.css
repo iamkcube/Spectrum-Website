@@ -164,7 +164,10 @@ a
 {
     transform: scaleX(100%);
 }
-
+.theme-switch
+{
+    display: flex;
+}
 #theme-switcher
 {
     cursor: pointer;
