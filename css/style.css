@@ -12,6 +12,7 @@
     --card-bg-hover: hsl(74, 19%, 82%);
     --button-transition-time: 100ms;
     --card-transition-time: 400ms;
+    --dark-transition-time: 200ms;
 }
 
 @media (prefers-color-scheme:dark)
@@ -32,6 +33,7 @@
         filter: invert(81%) sepia(10%) saturate(425%) hue-rotate(340deg) brightness(95%) contrast(89%);
     }
 }
+
 .light
 {
     --primaryColor: #002c3b;
@@ -43,6 +45,7 @@
     --card-bg: hsl(0, 0%, 100%);
     --card-bg-hover: hsl(74, 19%, 82%);
 }
+
 .dark
 {
     --primaryColor: hsl(24, 26%, 75%);
@@ -52,6 +55,11 @@
     --listColor: hsl(211, 30%, 60%);
     --card-bg: hsl(0, 0%, 15%);
     --card-bg-hover: hsl(74, 19%, 12%);
+}
+
+.light .social-icons img
+{
+    filter: initial;
 }
 
 *
@@ -69,6 +77,7 @@ html
     background: var(--bgColor);
     color: var(--primaryColor);
     animation: fade-in 500ms ease-in-out;
+    transition: background-color var(--dark-transition-time) ease-in, color var(--dark-transition-time) ease-in;
     /* for FOIT and FOUT */
 }
 
@@ -156,6 +165,53 @@ a
     transform: scaleX(100%);
 }
 
+#theme-switcher
+{
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    opacity: 0.8;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    position: relative;
+    isolation: isolate;
+}
+
+#theme-switcher svg
+{
+    width: 2em;
+    height: 2em;
+    fill: var(--primaryColor);
+}
+
+#theme-switcher:is(:hover, :focus-visible)
+{
+    outline: 0;
+    opacity: 1;
+}
+
+.toggle-circle
+{
+    transition: transform 500ms ease-out;
+}
+
+.light .toggle-circle
+{
+    transform: translateX(-15%);
+}
+
+.toggle-sun
+{
+    transform-origin: center center;
+    transition: transform 750ms cubic-bezier(0.11, 0.14, 0.29, 1.32);
+}
+
+.light .toggle-sun
+{
+    transform: rotate(0.5turn);
+}
+
 p
 {
     letter-spacing: 0.01em;
@@ -206,6 +262,8 @@ button
     background-color: var(--picBg);
     width: 20%;
     height: 52rem;
+    transition: background-color var(--dark-transition-time) ease-in, color var(--dark-transition-time) ease-in;
+
 }
 
 .pic-bg>img
@@ -720,6 +778,7 @@ main
 {
     background-image: url("https://images.pexels.com/photos/993626/pexels-photo-993626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
+
 .footer
 {
     flex-direction: column;

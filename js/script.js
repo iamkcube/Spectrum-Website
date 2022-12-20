@@ -18,19 +18,14 @@ numberingDivs.forEach((div) => {
 	});
 });
 
-// function isDarkMode() {
-// 	window.matchMedia &&
-// 		window.matchMedia("(prefers-color-scheme: dark)").matches;
-// }
+const colorSwitcher = document.querySelector("#theme-switcher");
 
-let colorSwitcher = document.querySelector("span.green");
 colorSwitcher.addEventListener("click", () => {
-	let colorTheme = document.documentElement.className;
-	console.log(colorTheme);
-	if (colorTheme === `light`) {
-		document.documentElement.className = `dark`;
-	}
-	else {
-		document.documentElement.className = `light`;
+	if (document.documentElement.classList.contains("light")) {
+		document.documentElement.classList.remove("light");
+		document.documentElement.classList.add("dark");
+	} else {
+		document.documentElement.classList.remove("dark");
+		document.documentElement.classList.add("light");
 	}
 });
