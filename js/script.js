@@ -17,3 +17,20 @@ numberingDivs.forEach((div) => {
 		itemNumber.textContent = `${num}`;
 	});
 });
+
+// function isDarkMode() {
+// 	window.matchMedia &&
+// 		window.matchMedia("(prefers-color-scheme: dark)").matches;
+// }
+
+let colorSwitcher = document.querySelector("span.green");
+colorSwitcher.addEventListener("click", () => {
+	let colorTheme = document.documentElement.className;
+	console.log(colorTheme);
+	if (colorTheme === `light`) {
+		document.documentElement.className = `dark`;
+	}
+	else {
+		document.documentElement.className = `light`;
+	}
+});

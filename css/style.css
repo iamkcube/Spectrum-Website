@@ -32,6 +32,27 @@
         filter: invert(81%) sepia(10%) saturate(425%) hue-rotate(340deg) brightness(95%) contrast(89%);
     }
 }
+.light
+{
+    --primaryColor: #002c3b;
+    --accentColor: #007b22;
+    --bgColor: #f6f6f6;
+    --picBg: #dfe4d2;
+    --paraColor: rgb(0 0 0 / 50%);
+    --listColor: #414243;
+    --card-bg: hsl(0, 0%, 100%);
+    --card-bg-hover: hsl(74, 19%, 82%);
+}
+.dark
+{
+    --primaryColor: hsl(24, 26%, 75%);
+    --bgColor: hsl(212, 15%, 10%);
+    --picBg: rgb(21, 39, 31);
+    --paraColor: rgba(221, 219, 241, 0.9);
+    --listColor: hsl(211, 30%, 60%);
+    --card-bg: hsl(0, 0%, 15%);
+    --card-bg-hover: hsl(74, 19%, 12%);
+}
 
 *
 {
@@ -235,7 +256,7 @@ main
     user-select: none;
 }
 
-#green
+.green
 {
     color: var(--accentColor);
 }
